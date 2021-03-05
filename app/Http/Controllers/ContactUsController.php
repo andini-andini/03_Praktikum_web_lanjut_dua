@@ -11,9 +11,8 @@ class ContactUsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return '<a href = "https://www.educastudio.com/contact-us">https://www.educastudio.com/contact-us</a>';
+    public function index() {
+        return view ('ContactUs');
     }
 
     /**
