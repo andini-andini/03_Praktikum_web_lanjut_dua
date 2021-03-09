@@ -5,7 +5,10 @@ use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 
+
+// Route::get('/', [PostController::class, 'index'])->name('post.index');
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 

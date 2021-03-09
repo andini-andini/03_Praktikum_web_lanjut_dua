@@ -46,10 +46,10 @@
                     </div>
                     <div class="collapse navbar-collapse" id="main-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="promotion.html">Promotion</a></li>
-                            <li><a href="products.html">Products</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{route('home.index')}}">Home</a></li>
+                            <li><a href="{{route('promotion.index')}}">Promotion</a></li>
+                            <li><a href="{{route('category.index')}}">Products</a></li>
+                            <li><a href="{{route('contact-us.index')}}">Contact</a></li>
                         </ul>
                     </div>
                 </nav>         

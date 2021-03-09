@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    public function index() {
-        return view ('Products');
+    public function index()
+    {
+        $posts = Post::all();
+        return view('Products', compact('posts'));
     }
 }

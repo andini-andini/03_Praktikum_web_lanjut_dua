@@ -8,16 +8,16 @@
     <title>Stone Template - Products</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- 
+    <!--
     Stone Template
     http://www.templatemo.com/preview/templatemo_452_stone
     -->
     <!-- Bootstrap Stylesheet -->
     <link rel="stylesheet" href="template/css/bootstrap.min.css">
-    
+
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="template/css/font-awesome.min.css">
-    
+
     <!-- Normailize Stylesheet -->
     <link rel="stylesheet" href="template/css/normalize.min.css">
 
@@ -46,13 +46,13 @@
                     </div>
                     <div class="collapse navbar-collapse" id="main-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="promotion.html">Promotion</a></li>
-                            <li><a href="products.html">Products</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{route('home.index')}}">Home</a></li>
+                            <li><a href="{{route('promotion.index')}}">Promotion</a></li>
+                            <li><a href="{{route('category.index')}}">Products</a></li>
+                            <li><a href="{{route('contact-us.index')}}">Contact</a></li>
                         </ul>
                     </div>
-                </nav>         
+                </nav>
             </div>
         </div>
     </div> <!-- .site-header -->
@@ -67,8 +67,8 @@
             </div>
         </div>
     </div>
-    
-    
+
+
 
     <div class="filter">
         <div class="container">
@@ -88,10 +88,16 @@
     <div class="products">
         <div class="container">
             <div class="row">
+                @foreach ($posts as $post)
+                <h4>{{$post->title }}</h4>
+
+                @endforeach
+
                 <div id="Grid">
+
                 <div class="mix category-1 col-md-3 col-sm-6">
                     <div class="thumb-p">
-                        <img src="images/p1.jpg" alt="">
+                        <img src="" alt="">
                         <div class="overlay-p">
                             <a href="images/p1.jpg" data-rel="lightbox"><i class="fa fa-plus"></i></a>
                         </div>
@@ -101,91 +107,8 @@
                         <span>Creative</span>
                     </div>
                 </div>
-                <div class="mix category-2 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="images/p2.jpg" alt="">
-                        <div class="overlay-p">
-                            <a href="images/p2.jpg" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>New Second</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-3 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="images/p3.jpg" alt="">
-                        <div class="overlay-p">
-                            <a href="images/p3.jpg" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Number Three</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-2 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="images/p4.jpg" alt="">
-                        <div class="overlay-p">
-                            <a href="images/p4.jpg" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Fourth Item</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-1 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="images/p5.jpg" alt="">
-                        <div class="overlay-p">
-                            <a href="images/p5.jpg" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Active Five</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-3 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="images/p6.jpg" alt="">
-                        <div class="overlay-p">
-                            <a href="images/p6.jpg" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Another Six</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-2 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="images/p7.jpg" alt="">
-                        <div class="overlay-p">
-                            <a href="images/p7.jpg" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>New Seven</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-1 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="images/p8.jpg" alt="">
-                        <div class="overlay-p">
-                            <a href="images/p8.jpg" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Eighth Item</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                </div>
+
+            </div>
             </div>
         </div>
     </div>
@@ -222,7 +145,7 @@
     <script src="js/vendor/jquery-1.10.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>    
-    
+    <script src="js/main.js"></script>
+
 </body>
 </html>
